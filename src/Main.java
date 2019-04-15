@@ -45,6 +45,7 @@ public class Main {
 	}
 	
 	public static String cifrarFile() throws Exception {
+		//Should specify file in next line to read.
 		InputStream is = new FileInputStream("/Users/leonardofiedler/Desktop/ecllipsewksp/vigenere-sample/src/message.txt");
 		BufferedReader buf = new BufferedReader(new InputStreamReader(is));
 
@@ -104,7 +105,7 @@ public class Main {
 			byte value = 0;
 			byte nDiff = (byte) (f - diff);
 			if (nDiff >= 65) {
-				value = (byte) (f - diff);
+				value = nDiff;
 			} else {
 				byte nValue = 90;
 				nValue -= 64 - (f - diff);
